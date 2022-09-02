@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="utf-8" />
+    <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png" />
+    <link rel="icon" type="image/png" href="assets/img/favicon1.png" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Hyper-plasma</title>
+    <meta content="width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+    <link href="./assets/css/material-kit.css?v=2.0.7" rel="stylesheet" />
+    <link href="./assets/demo/demo.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Teko&display=swap" rel="stylesheet" />
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+</head>
+
+<body>
+    
+    <nav class="navbar navbar-transparent navbar-color-on-scroll fixed-top navbar-expand-lg bg-dark navbar-bg" style="color: whitesmoke; background-color: #3f4067 !important" color-on-scroll="100" id="sectionsNav">
+        <div class="container">
+            <div class="navbar-translate">
+                <a class="navbar-brand" href="#">
+                    <img src="assets/img/plasma1---copia.png" width="5%" alt="" />yper-Plasma
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"></span>
+          </button>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:void(0)" onclick="scrollToDownload2()">
+                            <i class="material-icons">description</i> Requisitos
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:void(0)" onclick="scrollToDownload()">
+                            <i class="material-icons">description</i> Recomendación
+                        </a>
+                    </li>
+                    <li class="dropdown nav-item">
+                        <a class="dropdown-toggle nav-link" href="#" data-toggle="dropdown">
+                            <i class="material-icons">how_to_reg</i> Registrarse
+                        </a>
+                        <div class="dropdown-menu dropdown-with-icons">
+                            <a [routerLink]="['/donorRegistry']" class="dropdown-item">
+                                <i class="material-icons">layers</i> Donante
+                            </a>
+                            <a [routerLink]="['/interestedRegistry']" class="dropdown-item">
+                                <i class="material-icons">how_to_reg</i> Interesado
+                            </a>
+                        </div>
+                    </li>
+                    <li class="dropdown nav-item hv_hov">
+                        <a class="nav-link" (click)="login()">
+                            <i class="material-icons">login</i> login
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="page-header header-filter clear-filter" data-parallax="true" style="
+        background-image: linear-gradient(
+          to right top,
+          #ed435e,
+          #b93f7d,
+          #784580,
+          #3f4067,
+          #25313f
+        );
+      ">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 ml-auto mr-auto">
+                    <div class="brand">
+                        <h1>Hyper-Plasma - 2020</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main main-raised">
+        <div class="section section-basic">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card row">
+                            <div class="card-header" style="background: #ed435e !important">
+                                <div class="card-icon text-center" style="color: #fff">
+                                    <i class="material-icons">message</i> Acerca de Hyper-Plasma
+                                </div>
+                            </div>
+                            <div class="card-body text-center">
+                                <h4>
+                                    Debido a los acontecimientos actuales de la pandemia Covid-19 existe una alta demanda de donantes de plasma hiperinmune. Debido a la falta de una cura definitiva para el Covid-19, el plasma es uno de los tratamientos más eficientes y demandados hoy en
+                                    día.
+                                </h4>
+                                <hr />
+                                <h5>
+                                    Para solventar esta necesidad las personas han recurrido a buscar donantes de plasma mediante una masiva difusión en las diferentes redes sociales, esto hace que la información se encuentre dispersa por toda la red y dependa de la voluntad de muchas personas
+                                    para poder encontrar donantes.
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center"></div>
+    
+                <div class="space-35"></div>
+            </div>
+        </div>
+    
+        <div class="section section-tabs" style="background-color: #ed435e">
+            <div class="container">
+                <!--                nav tabs	             -->
+                <div id="nav-tabs">
+                    <div class="row">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-10">
+                            <h3 class="text-dark text-center">
+                                <small class="text-white"></small>
+                            </h3>
+                            <!-- Tabs with icons on Card -->
+                            <div class="card">
+                                <div class="card-header" style="background: #25313f !important">
+                                    <div class="nav-tabs-navigation">
+                                        <div class="nav-tabs-wrapper">
+                                            <ul class="nav nav-tabs" data-tabs="tabs">
+                                                <li class="nav-item">
+                                                    <a class="nav-link active" href="#profile" data-toggle="tab" style="color: #ed435e !important">
+                                                        <i class="material-icons">coronavirus</i> Covid-19
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="#messages" data-toggle="tab" style="color: #ed435e !important">
+                                                        <i class="material-icons">chat</i> Plasma
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="#settings" data-toggle="tab" style="color: #ed435e !important">
+                                                        <i class="material-icons">healing</i> Información
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="tab-content text-center">
+                                        <div class="tab-pane active" id="profile">
+                                            <br />
+                                            <h5>
+                                                La COVID-19 es la enfermedad infecciosa causada por el coronavirus que se ha descubierto más recientemente. Tanto el nuevo virus como la enfermedad eran desconocidos antes de que estallara el brote en Wuhan (China) en diciembre de 2019.
+                                            </h5>
+                                        </div>
+                                        <div class="tab-pane" id="messages">
+                                            <br />
+                                            <h5>
+                                                El plasma de convaleciente y la inmunoglobulina hiperinmune pueden reducir la mortalidad en pacientes con enfermedades causadas por virus respiratorios. Actualmente se están investigando en ensayos como posible tratamiento para la enfermedad por coronavirus
+                                                2019 (COVID‐19). Se requiere un profundo conocimiento del conjunto de evidencia actual sobre los efectos beneficiosos y los riesgos.
+                                            </h5>
+                                        </div>
+                                        <br />
+                                        <div class="tab-pane" id="settings">
+                                            <h5>
+                                                Los adultos mayores y las personas con afecciones subyacentes graves, como enfermedades cardíacas o pulmonares o diabetes, al parecer tienen mayor riesgo de presentar complicaciones graves a causa del COVID-19.
+                                            </h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Tabs with icons on Card -->
+                        </div>
+                        <div class="col-md-1"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 	            end nav tabs -->
+        <div class="section-requisitos"><br /></div>
+        <div class="section section-white">
+            <div class="container">
+                <!--                 nav pills -->
+                <div id="navigation-pills">
+              
+                    <div class="title text-center">
+                        <h3><small>Requisitos para Donar Plasma</small></h3>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-1"></div>
+                        <div class="col-lg-10 col-md-12">
+                            <ul class="nav nav-pills nav-pills-icons nav-pills-rose" role="tablist">
+                                <!--
+                                color-classes: "nav-pills-primary", "nav-pills-info", "nav-pills-success", "nav-pills-warning","nav-pills-danger"
+                            -->
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#dashboard-1" role="tab" data-toggle="tab">
+                                        <i class="material-icons">coronavirus</i> Requisito 1
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="#schedule-1" role="tab" data-toggle="tab">
+                                        <i class="material-icons">sick</i> Requisito 2
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#tasks-1" role="tab" data-toggle="tab">
+                                        <i class="material-icons">healing</i> Requisito 3
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#tasks-2" role="tab" data-toggle="tab">
+                                        <i class="material-icons">sentiment_very_satisfied</i> Requisito 4
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#tasks-3" role="tab" data-toggle="tab">
+                                        <i class="material-icons">people_alt</i> Requisito 5
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#tasks-4" role="tab" data-toggle="tab">
+                                        <i class="material-icons">pregnant_woman</i> Requisito 6
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#tasks-5" role="tab" data-toggle="tab">
+                                        <i class="material-icons">local_hospital</i> Requisito 7
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#tasks-6" role="tab" data-toggle="tab">
+                                        <i class="material-icons">accessibility</i> Requisito 8
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="tab-content tab-space text-center">
+                                <div class="container-fluid"></div>
+                                <div class="tab-pane active" id="dashboard-1">
+                                    <h4>• Ser un paciente recuperado del COVID-19.</h4>
+                                </div>
+                                <div class="tab-pane" id="schedule-1">
+                                    <h4>• 14 días sin presentar síntomas de COVID-19.</h4>
+                                </div>
+                                <div class="tab-pane" id="tasks-1">
+                                    <h4>
+                                        • No tener problemas respiratorios, circulatorios y gastroenterológicos.
+                                    </h4>
+                                </div>
+                                <div class="tab-pane" id="tasks-2">
+                                    <h4>
+                                        • Los donantes dan su consentimiento, dando a conocer que lo hacen de manera voluntaria.
+                                    </h4>
+                                </div>
+                                <div class="tab-pane" id="tasks-3">
+                                    <h4>
+                                        • Tener entre 18 y 70 años de edad y pesar 50 kilos o mas.
+                                    </h4>
+                                </div>
+                                <div class="tab-pane" id="tasks-4">
+                                    <h4>
+                                        • No estar embarazada o haber tenido 2 gestaciones o mas.
+                                    </h4>
+                                </div>
+                                <div class="tab-pane" id="tasks-5">
+                                    <h4>
+                                        • No haber realizado muchas transfusiones de sangre anteriormente.
+                                    </h4>
+                                </div>
+                                <div class="tab-pane" id="tasks-6">
+                                    <h4>
+                                        • Gozar de buena salud y no utilizar ninguna medicación.
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-1"></div>
+                    </div>
+                </div>
+                <!--                 end nav pills -->
+            </div>
+        </div>
+        <!--        notifications -->
+    
+        <!--        end notifications -->
+    
+        <!--         carousel  -->
+    </div>
+    
+    <div class="section-download"><br /></div>
+    <div class="containerbox">
+        <div class="box">
+            <div class="content">
+                <div class="caja">
+                    <img src="assets/img/infocovid19/washing-hand(1).png" alt="" />
+                    <p>
+                        Lava tus manos con jabon y agua despues de tocar animales y productos de origen animal
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="content">
+                <div class="caja">
+                    <img src="assets/img/infocovid19/cold.png" alt="" />
+                    <p>
+                        Al tocer o estornudar cubra la boca y la nariz con su antebrazo o un pañuelo
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="content">
+                <div class="caja">
+                    <img src="assets/img/infocovid19/flight.png" alt="" />
+                    <p>Evita viajar si tienes fiebre o resfrio</p>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="content">
+                <div class="caja">
+                    <img src="assets/img/infocovid19/first-aid-kit.png" alt="" />
+                    <p>
+                        Si tienes fiebre, tos y dificultad de respirar busca atencion medica rapidamente
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="content">
+                <div class="caja">
+                    <img src="assets/img/infocovid19/medical-mask.png" alt="" />
+                    <p>
+                        Si está tosiendo o estornudando, use un barbijo correctamente y no olvide desecharla.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="content">
+                <div class="caja">
+                    <img src="assets/img/infocovid19/cooking.png" alt="" />
+                    <p>Coma solo alimentos bien cocidos.</p>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="content">
+                <div class="caja">
+                    <img src="assets/img/infocovid19/fever.png" alt="" />
+                    <p>Evite el contacto cercano con animales enfermos.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <br />
+    <div></div>
+    <div class="main main-raised">
+        <div class="section" id="carousel">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12 mr-auto ml-auto">
+                        <hr />
+                        <!-- Carousel Card -->
+                        <div class="card card-raised card-carousel">
+                            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="3000">
+                                <ol class="carousel-indicators">
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                                </ol>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active" style="height: 40vh; width: 100%">
+                                        <img width="100%" style="transform: translate(0%, -10%)" src="./assets/img/banner/1878.jpg" alt="First slide" />
+                                        <div class="carousel-caption d-none d-md-block">
+                                            <h4><i class="material-icons">location_on</i> Plasma1</h4>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item" style="height: 40vh; width: 100%">
+                                        <img width="100%" style="transform: translate(0%, -20%)" src="./assets/img/banner/31382.jpg" alt="Second slide" />
+                                        <div class="carousel-caption">
+                                            <h4><i class="material-icons">location_on</i> Plasma2</h4>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item" style="height: 40vh; width: 100%">
+                                        <img width="100%" style="transform: translate(0%, -20%)" src="./assets/img/banner/2711595.jpg" alt="Third slide" />
+                                        <div class="carousel-caption d-none d-md-block">
+                                            <h4><i class="material-icons">location_on</i> Plasma3</h4>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                                    <i class="material-icons">keyboard_arrow_left</i>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                                    <i class="material-icons">keyboard_arrow_right</i>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+                        </div>
+                        <hr />
+                        <!-- End Carousel Card -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--         end carousel -->
+    
+        <div class="" id="">
+            <div class="container-fluid text-center" style="background: #ed435e">
+                <h3></h3>
+                <div class="col-lg-12 text-white">
+                    <h5>&copy;2020 - AIORIA</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+
+
+
+
+
+
+    <script src="https://kit.fontawesome.com/dd9747b474.js" crossorigin="anonymous"></script>
+    <script src="./assets/js/core/jquery.min.js" type="text/javascript"></script>
+    <script src="./assets/js/core/popper.min.js" type="text/javascript"></script>
+    <script src="./assets/js/core/bootstrap-material-design.min.js" type="text/javascript"></script>
+    <script src="./assets/js/plugins/moment.min.js"></script>
+    <script src="./assets/js/plugins/bootstrap-datetimepicker.js" type="text/javascript"></script>
+    <script src="./assets/js/plugins/nouislider.min.js" type="text/javascript"></script>
+    <script src="./assets/js/material-kit.js?v=2.0.7" type="text/javascript"></script>
+    <script>
+        $(document).ready(function() {
+            materialKit.initFormExtendedDatetimepickers();
+
+            materialKit.initSliders();
+        });
+
+        $(function() {
+            var text = $(".navbar-bg");
+            $(window).scroll(function() {
+                var scroll = $(window).scrollTop();
+
+                if (scroll >= 800) {
+                   
+                    var x = document.querySelectorAll("#sectionsNav");
+                    x[0].style.setProperty("background-color", "#263240", "important");
+                } else {
+                    var x = document.querySelectorAll("#sectionsNav");
+                    x[0].style.setProperty("background-color", "transparent", "important");
+                }
+            });
+        });
+        function scrollToDownload() {
+            if ($(".section-download").length != 0) {
+                $("html, body").animate({
+                        scrollTop: $(".section-download").offset().top,
+                    },
+                    1000
+                );
+            }
+        }
+
+        function scrollToDownload2() {
+            if ($(".section-requisitos").length != 0) {
+                $("html, body").animate({
+                        scrollTop: $(".section-requisitos").offset().top,
+                    },
+                    1000
+                );
+            }
+        }
+
+        function sendEmail() {
+            Swal.fire({
+                allowOutsideClick: false,
+                icon: 'info',
+                text: 'Espere un momento...'});
+            Swal.showLoading();
+
+            let message = document.getElementById("txtMessage").value;
+
+            if (message === '') {
+                Swal.fire({
+                    title: 'Campo vacío',
+                    icon: 'error',
+                    text: 'Debe llenar el mensaje antes de enviarlo.'});
+            } else {
+                Swal.close();
+                const userId = sessionStorage.getItem('userId');
+                message += '\n<br>Id del usuario: ' + userId;
+                document.getElementById("txtMessage").value = '';
+                Email.send({
+                    Host : "smtp.elasticemail.com",
+                    Username : "farmavitaeacct@gmail.com",
+                    Password : "D60B679A9C3972481D2AA5FA6D88C1EE4F8F",
+                    To : 'hyperplasmabo@gmail.com',
+                    From : "farmavitaeacct@gmail.com",
+                    Subject : "HyperPlasma",
+                    Body : message
+                }).then(
+                    Swal.fire({
+                        title: 'Envío correcto',
+                        icon: 'success',
+                        text: 'Se envió su mensaje con éxito.'})
+                );
+            }
+        }
+    </script>
+</body>
+
+</html>

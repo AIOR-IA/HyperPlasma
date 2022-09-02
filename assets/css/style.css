@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css?family=Rubik:300,400,500&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Rubik", sans-serif;
+    /* afecta a todo la caja donde este dentro el contenido */
+    /* afecta a solo el tamaño del contenido no de la caja */
+    /* box-sizing: content-box; */
+}
+
+body {
+    display: flexbox;
+    justify-content: center;
+    align-self: center;
+    min-height: 90vh;
+    /* background: #222; */
+    padding: 0;
+}
+
+.containerbox .box img {
+    position: relative;
+    max-width: 100px;
+    margin-bottom: 10px;
+}
+
+.box:hover {
+    background: #ed435e !important;
+}
+
+.containerbox {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
+    grid-template-rows: 30vh 30vh 30vh;
+    /* grid-template-rows: repeat(auto-fill, minmax(1px, 1fr)); */
+    margin: 40px;
+    grid-auto-flow: dense;
+    grid-gap: 10px;
+}
+
+.containerbox .box {
+    background: #25313f;
+    /* revisar padding */
+    padding: 0px;
+    display: grid;
+    font-size: 20px;
+    place-items: center;
+    text-align: center;
+    color: #fff;
+    transition: 0.5s;
+    height: 100%;
+}
+
+.caja {
+    padding: 25px;
+}
+
+.containerbox .box :hover {}
+
+.containerbox .box:nth-child(1) {
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+.containerbox .box:nth-child(3) {
+    grid-column: span 1;
+    grid-row: span 2;
+}
+
+.containerbox .box:nth-child(4) {
+    grid-column: span 1;
+    grid-row: span 2;
+}
+
+.containerbox .box:nth-child(5) {
+    grid-column: span 2;
+    grid-row: span 1;
+}
+.containerbox .box:nth-child(7) {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+@media (max-width: 991px) {
+    .containerbox {
+        grid-template-columns: repeat(auto-fill, minmax(50%, 1fr)) !important;
+        grid-template-rows: minmax(auto, auto) !important;
+    }
+    .containerbox .box {
+        grid-column: unset !important;
+        grid-row: unset !important;
+    }
+}
